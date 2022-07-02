@@ -20,7 +20,7 @@ import TheMain from './components/TheMain.vue';
 
 
 export default {
-    name: "App",
+   
     components: { TheHeader, TheFooter, TheMain }
 }
 

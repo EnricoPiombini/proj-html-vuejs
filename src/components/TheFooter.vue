@@ -1,19 +1,22 @@
 <template>
-<div>
-
-</div>
+    <div>
+        <BuildingSpaces></BuildingSpaces>
+    </div>
 
 </template>
 
 
 <script>
-export default{
+import BuildingSpaces from "./BuildingSpaces.vue";
 
+export default {
+   
+    components: {
+        BuildingSpaces
+    }
 }
 
 </script>
 
 <style>
-
-
 </style>
