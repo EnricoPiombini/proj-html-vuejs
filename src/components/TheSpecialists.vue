@@ -1,50 +1,55 @@
 <template>
     <div>
         <div class="section pt-5">
-            <div class="section section-text text-center">
-                <div class="section-title">
-                    <h4>Specialists In Modern Construction</h4>
-                </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="section-title d-flex flex-column">
 
-                <div class="div-line"></div>
+                        <div class="title">
+                            <h2>Specialists In Modern Construction</h2>
+                        </div>
 
-                <div class="title-description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam magni iure facilis
-                        omnis blanditiis expedita, porro repellendus! Deserunt minima praesentium quas commodi, optio
-                        iste iusto odit sint fugiat laudantium!
-                        Numquam aliquam earum illum qui fugiat aperiam similique perferendis consequatur saepe facere
-                        minus, maxime dignissimos ad vel culpa sapiente ut blanditiis laborum illo dolore iste
-                        repudiandae asperiores. Delectus, rem nulla!</p>
+                        <div class="div-line"></div>
+                    </div>
+                    <div class="title-description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam magni iure
+                            facilis
+                            omnis blanditiis expedita, porro repellendus! Deserunt minima praesentium quas commodi.
+
+                        </p>
+                    </div>
                 </div>
             </div>
 
 
-           
+            <div class="custom_padding">
+                <div class="row justify-content-center mt-5">
 
-                <div class="row row-cols-4 mt-5">
-                    <div class="col" v-for="card in cardList" :key="card.icon">
-                        <!-- <div class="content"> -->
-                        <i :class="card.icon"></i>
-                        <div class="title-card"> {{ card.title }} </div>
-                        <p class="card-info"> {{ card.info }} </p>
+                    <div class="col-3" v-for="card in cardList" :key="card.icon">
+
+                        <div class="card">
+                            <i :class="card.icon"></i>
+                            <div class="title-card"> {{ card.title }} </div>
+                            <p class="card-info p-3"> {{ card.info }} </p>
+                        </div>
                     </div>
                 </div>
-            
+            </div>
 
-<div class="br"></div>
+            <div class="br"></div>
 
 
             <div class="bg-curved">
                 <div class="data d-flex justify-content-center">
-                    <div v-for="data in dataList" :key="data.app">
+                    <div class="m-5" v-for="data in dataList" :key="data.app">
                         <i :class="data.icon"></i>
                         <h3 class="number"> {{ data.number }} </h3>
-                        <p class="data-info"> {{ data.info }} </p>
+                        <p class="data-info text-white text-uppercase"> {{ data.info }} </p>
                     </div>
                 </div>
             </div>
 
-<div class="br br-after"></div>
+            <div class="br br-after"></div>
 
         </div>
     </div>
@@ -125,30 +130,77 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "../assets/variables.scss";
+
+.title {
+    h2 {
+        padding-top: 5rem;
+    }
+}
+
+.div-line {
+    border: 2px solid;
+    color: $primary;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.custom_padding {
+    padding-left: 12rem;
+    padding-right: 12rem;
+
+    .card {
+        background-color: #F5F5F5;
+    }
+
+    i {
+        font-size: 30px;
+        border: 1px solid;
+        border-radius: 50%;
+        padding: 1rem;
+        margin: auto;
+    }
+}
+
+
+
+
 .bg-curved {
 
     background-image: url("/public/img/home-244125289.jpg");
     background-size: cover;
-    min-height: 450px;
+    min-height: 700px;
 
-    .data{
-        padding-top: 8rem;
+    .data {
+        padding-top: 10rem;
+        margin: 2rem;
     }
-    
+
+    i{
+        color:$primary;
+        font-size:70px ;
+    }
+    h3 {
+        color: $primary
+    }
+
 }
 
-.br{
-    width: 100%;
+.br {
+   width: 100%;
     height: 150px;
-    /* border: 1px solid; */
     border-radius: 15%;
     position: relative;
-    top: 45px;
+    top: 100px;
     background: white;
     z-index: 2;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
-.br-after{
+.br-after {
     top: -50px;
 
 }

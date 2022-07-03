@@ -65,8 +65,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/variables.scss";
 ul li a {
     margin: 1rem;
-    font-size: 20px;
+    font-size: 16px;
+    color: $silver;
+ 
+
+    &:hover {
+        color: $primary;
+    }
 }
 </style>
