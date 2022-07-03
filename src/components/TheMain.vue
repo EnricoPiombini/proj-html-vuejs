@@ -7,39 +7,41 @@
         <HomeOwners></HomeOwners>
 
 
-      <div class="bg-relative">
+        <div class="bg-relative">
             <div class="text text-center pt-5">
                 <div class="section-title">
                     <h2>Latest News</h2>
                 </div>
                 <div class="br"></div>
-                <div class="section-desctiption">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet,
+                <div class="section-description w-50 m-auto">
+                    <p class="font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis
+                        aspernatur amet,
                         expedita repellat, consequatur nisi distinctio quibusdam voluptatem facilis. Veniam quas
                         soluta
                         distinctio quasi doloremque molestias, est nostrum!</p>
                 </div>
 
 
-                <div class="row row-cols-3 justify-content-center">
-
-                    <div class="col" v-for="article in articleList" :key="article.img">
-                        <div class="content">
-                            <TheLatests :article="article"></TheLatests>
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-3" v-for="article in articleList" :key="article.img">
+                        <TheLatests :article="article"></TheLatests>
                     </div>
                 </div>
 
+                <div class="banner-projects d-flex align-items-center mt-5">
+                    <div class="br br-transparent"></div>
+                    <div>
+                        <h6 class="text-uppercase">View all Articles</h6>
+                    </div>
+                    <div class="br br-transparent"></div>
+                </div>
+
             </div>
-       </div>
-
-
+        </div>
 
         <TrustedPartners></TrustedPartners>
-
-
-
     </div>
+
 </template>
 
 
@@ -69,19 +71,21 @@ export default {
                 {
                     img: "img/blog-post-134132600-400x241.jpg",
                     subTitle: "Redeveloping Florida's Remote Southern Coast",
-                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet",
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet, consectetur adisciping elit.Vivamus purus nisl elementum vitae consequat at tristique ut enim. Sed ut dignissim leo.Nullam sed metus id sapien faucibus rhoncus sed."
+
+
 
                 },
                 {
                     img: "img/blog-post-92486644-400x241.jpg",
                     subTitle: "How We Manage Large Construction Projects",
-                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet",
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet, consectetur adisciping elit.Vivamus purus nisl elementum vitae consequat at tristique ut enim. Sed ut dignissim leo.Nullam sed metus id sapien faucibus rhoncus sed."
 
                 },
                 {
                     img: "img/blog-post-332773904-400x241.jpg",
                     subTitle: "Future proofing a modern home",
-                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet",
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quis aspernatur amet, consectetur adisciping elit.Vivamus purus nisl elementum vitae consequat at tristique ut enim. Sed ut dignissim leo.Nullam sed metus id sapien faucibus rhoncus sed."
 
                 }
             ]
@@ -96,9 +100,28 @@ export default {
 
 
 <style lang="scss" scoped>
-.bg-relative{
+@import "../assets/variables.scss";
+.bg-relative {
     background-color: #F5F5F5;
     position: relative;
     bottom: 140px;
+}
+
+.font {
+    font-size: 18px;
+}
+
+.br{
+    border: 2px solid;
+    color: $primary;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.br-transparent{
+    color:$gray-200;
+    flex-basis: 30%;
 }
 </style>

@@ -13,30 +13,30 @@
                 </p>
             </div>
 
-           
-                <div class="row">
-                    <div class="col-3" v-for="(value, i) in valuesList" :key="i">
-                        <div class="content">
-                            <div :class="{
-                                'bg-red': value.id === 1,
-                                'bg-blue': value.id === 2,
-                                'bg-orange': value.id === 3,
-                                'bg-light-green': value.id === 4,
-                            }" id="bg-icon">
 
-                                <i id="value_color" :class="value.icon"></i>
-                            </div>
+            <div class="row">
+                <div class="col-3" v-for="(value, i) in valuesList" :key="i">
+                    <div class="content">
+                        <div :class="{
+                            'bg-red': value.id === 1,
+                            'bg-blue': value.id === 2,
+                            'bg-orange': value.id === 3,
+                            'bg-light-green': value.id === 4,
+                        }" id="bg-icon">
 
-                            <h6 class="sub-title"> {{ value.subTitle }} </h6>
-                            <div class="div-line"></div>
-                            <p class="text"> {{ value.text }} </p>
-
+                            <i id="value_color" :class="value.icon"></i>
                         </div>
+
+                        <h6 class="sub-title"> {{ value.subTitle }} </h6>
+                        <div class="div-line"></div>
+                        <p class="text"> {{ value.text }} </p>
 
                     </div>
 
                 </div>
-           
+
+            </div>
+
         </div>
     </div>
 </template>
@@ -44,7 +44,6 @@
 
 <script>
 
-"{'bg-red': value.id === 1}"
 
 export default {
     data() {
@@ -54,7 +53,6 @@ export default {
             valuesList: [
                 {
                     icon: "fa-solid fa-house-chimney",
-
                     subTitle: "Great Services",
                     text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,adipisci velit,sed quia",
                     id: 1
@@ -100,7 +98,7 @@ export default {
 
 .bg {
     background-color: #F5F5F5;
-    position:relative;
+    position: relative;
     top: 140px;
 }
 

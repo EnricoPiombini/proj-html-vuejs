@@ -1,23 +1,17 @@
 <template>
     <div>
-        <div class="top_img">
-            <img :src="article.img" alt="">
-        </div>
-        <div class="sub-title">
-            <h4> {{ article.subTitle }} </h4>
-        </div>
-        <div class="article-text">
-            <p class="text">
-                {{ article.text }}
+        <div class="card custom-height">
+            <img :src="article.img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">{{ article.subTitle }}</h4>
+                <p class="card-text card-font">{{ article.text }}</p>
 
-            </p>
+            </div>
         </div>
+
+        
+
     </div>
-
-
-
-
-
 </template>
 
 
@@ -44,4 +38,17 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "../assets/variables.scss";
+.custom-height {
+    height: 100%;
+}
+
+.card-body {
+
+    .card-font {
+        font-size: 18px;
+    }
+}
+
+
 </style>
