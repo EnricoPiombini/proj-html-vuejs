@@ -7,10 +7,10 @@
         <HomeOwners></HomeOwners>
 
 
-      <div>
-            <div class="text text-center">
+      <div class="bg-relative">
+            <div class="text text-center pt-5">
                 <div class="section-title">
-                    <h4>Latest News</h4>
+                    <h2>Latest News</h2>
                 </div>
                 <div class="br"></div>
                 <div class="section-desctiption">
@@ -96,5 +96,9 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.bg-relative{
+    background-color: #F5F5F5;
+    position: relative;
+    bottom: 140px;
+}
 </style>
