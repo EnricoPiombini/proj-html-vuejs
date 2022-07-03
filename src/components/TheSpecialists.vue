@@ -164,9 +164,6 @@ export default {
     }
 }
 
-
-
-
 .bg-curved {
 
     background-image: url("/public/img/home-244125289.jpg");
@@ -174,22 +171,22 @@ export default {
     min-height: 700px;
 
     .data {
-        padding-top: 10rem;
+        padding-top: 15rem;
         margin: 2rem;
     }
 
-    i{
-        color:$primary;
-        font-size:70px ;
+    i {
+        color: $primary;
+        font-size: 100px;
     }
+
     h3 {
         color: $primary
     }
-
 }
 
 .br {
-   width: 100%;
+    width: 100%;
     height: 150px;
     border-radius: 15%;
     position: relative;
@@ -203,13 +200,5 @@ export default {
 .br-after {
     top: -50px;
 
-}
-
-
-
-
-
-.data {
-    padding-top: 8rem;
 }
 </style>

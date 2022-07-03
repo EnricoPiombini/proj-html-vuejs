@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/variables.scss";
-.br {
+.br{
     border: 2px solid;
     color: $primary;
     margin: auto;

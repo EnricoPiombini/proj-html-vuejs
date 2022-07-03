@@ -6,8 +6,8 @@
         <CoreValues></CoreValues>
         <HomeOwners></HomeOwners>
 
-        <div>
 
+      <div>
             <div class="text text-center">
                 <div class="section-title">
                     <h4>Latest News</h4>
@@ -22,18 +22,18 @@
 
 
                 <div class="row row-cols-3 justify-content-center">
-                   
+
                     <div class="col" v-for="article in articleList" :key="article.img">
                         <div class="content">
-                             <TheLatests :article="article"></TheLatests>
+                            <TheLatests :article="article"></TheLatests>
                         </div>
                     </div>
                 </div>
 
             </div>
+       </div>
 
 
-        </div>
 
         <TrustedPartners></TrustedPartners>
 

@@ -12,8 +12,8 @@
 
             </p>
         </div>
-
     </div>
+
 
 
 
@@ -31,7 +31,7 @@ export default {
 
     data() {
         return {
-           
+
 
         }
     }

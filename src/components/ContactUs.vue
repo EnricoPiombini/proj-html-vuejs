@@ -1,5 +1,5 @@
 <template>
-    
+    <div>
         <div class="col-3">
             <div class="content">
                 <h5>CONTACT US</h5>
@@ -17,7 +17,7 @@
             </div>
 
         </div>
- 
+ </div>
 
 </template>
 
