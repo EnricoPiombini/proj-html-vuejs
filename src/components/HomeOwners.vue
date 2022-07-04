@@ -1,37 +1,46 @@
 <template>
     <div>
         <div class="curve-div-top"></div>
-
+<div>
         <div class="bg-curved">
-
-            <div class="slider" tabindex="0">
-                <div class="section-title">
-                    <h2 class="text-white">Our Home Owners Say</h2>
-                </div>
-                <div class="br"></div>
-                
-                <div class="item">
-                    <img :src="carouselList[currentIndex].img"
-                        v-bind:alt="'Immagine di ' + carouselList[currentIndex].img" class="rounded-circle" />
-                    <div class="text w-50 m-auto ">
-                        <p class="text-white font-italic owner-statement">
-                            {{ carouselList[currentIndex].text }}
-                        </p>
-
-                        <div class="owners-name">
-                            <h5 class="fw-bold text-white">{{ carouselList[currentIndex].name }}</h5>
-
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="slider">
+                        <div class="section-title">
+                            <h2 class="text-white">Our Home Owners Say</h2>
                         </div>
-                    </div>
-                </div>
+                        <div class="br"></div>
 
-                <div class="carousel-dots">
-                    <button type="button" class="btn btn-outline-light btn-padding prev"
-                        @click="changeImg('prev')"></button>
-                    <button type="button" class="btn btn-outline-light btn-padding next"
-                        @click="changeImg('next')"></button>
+                        <div class="item">
+                            <img :src="carouselList[currentIndex].img"
+                                v-bind:alt="'Immagine di ' + carouselList[currentIndex].img" class="rounded-circle" />
+                            <div class="text w-50 m-auto ">
+                                <p class="text-white font-italic owner-statement">
+                                    {{ carouselList[currentIndex].text }}
+                                </p>
+
+                                <div class="owners-name">
+                                    <h5 class="fw-bold text-white">{{ carouselList[currentIndex].name }}</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-dots">
+                            <button type="button" class="btn btn-outline-light btn-padding prev"
+                                @click="changeImg('prev')"></button>
+                            <button type="button" class="btn btn-outline-light btn-padding next"
+                                @click="changeImg('next')"></button>
+                        </div>
+
+
+
+                    </div>
+
                 </div>
             </div>
+
+
             <!-- 
             <div class="slidesInfo slides-index" v-for="(slider, i) in carouselList" :key="i"
                 :class="{ 'display-none': slider.id===1 }">
@@ -61,7 +70,7 @@
             </div> -->
 
         </div>
-
+</div>
         <!-- <div class="carousel-dots">
             <button type="button" class="btn btn-outline-light btn-padding prev" @click="changeImg('prev')"></button>
             <button type="button" class="btn btn-outline-light btn-padding next" @click="changeImg('next')"></button>
@@ -127,7 +136,7 @@ export default {
 .bg-curved {
     background-image: url("/public/img/home-parallax-144609983.jpg");
     background-size: cover;
-    min-height: 750px;
+    min-height: 960px;
     position: relative;
 
     .slider {

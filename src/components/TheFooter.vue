@@ -5,7 +5,7 @@
         <div class="br"></div>
             <div class="bg">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="content p-4">
                             <div class="logo_footer mb-3 text-start">
                                 <img src="img/footer-logo.png" alt="">
@@ -23,7 +23,7 @@
 
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="content p-4">
                             <div class="col_title">
                                 <h5 class="text-warning text-start fw-bold mb-5">LATEST TWEETS</h5>
@@ -77,7 +77,7 @@
 
                     <ContactUs></ContactUs>
 
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="content p-4">
                             <div class="col-title">
                             <h5 class="text-warning text-start fw-bold mb-5">FIND US</h5>

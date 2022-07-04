@@ -3,7 +3,7 @@
         <div class="bg">
 
             <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-12 col-sm-6 col-md-4">
                     <div class="content">
                         <div class="title">
                             <h2 class="text-white">Building Inspiring Spaces</h2>
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-sm-6 col-md-4">
                     <div class="content">
                         <div class="button">
                             <button type="button" class="btn btn-warning">Warning</button>

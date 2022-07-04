@@ -14,7 +14,7 @@
         </div>
 
         <div class="row justify-content-center align-items-center mb-5">
-            <div class="col-2" v-for="partners in partnersList" :key="partners.img">
+            <div class="col-12 col-sm-6 col-md-2" v-for="partners in partnersList" :key="partners.img">
                 <div class="content">
                     <div class="partners_logo">
                         <img :src="partners.img" alt="" class="w-100">

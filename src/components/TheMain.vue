@@ -22,8 +22,8 @@
                 </div>
 
 
-                <div class="row justify-content-center">
-                    <div class="col-3" v-for="article in articleList" :key="article.img">
+                <div class="row justify-content-center g-2">
+                    <div class="col-12 col-sm-6 col-md-3" v-for="article in articleList" :key="article.img">
                         <TheLatests :article="article"></TheLatests>
                     </div>
                 </div>
