@@ -2,15 +2,15 @@
     <div>
         <div class="bg">
 
-            <div class="row">
-                <div class="col-6">
+            <div class="row justify-content-center">
+                <div class="col-4">
                     <div class="content">
                         <div class="title">
-                            <h4>Building Inspiring Spaces</h4>
+                            <h2 class="text-white">Building Inspiring Spaces</h2>
                         </div>
                         <div class="br"></div>
                         <div class="section-description">
-                            <p>Vivamus sed consectetur tellus dolor sit amet, consectetur adipiscing
+                            <p class="text-white">Vivamus sed consectetur tellus dolor sit amet, consectetur adipiscing
                                 lorem elit sadip ipsum ets ficilis uns.
                             </p>
                         </div>
@@ -22,7 +22,7 @@
                             <button type="button" class="btn btn-warning">Warning</button>
                         </div>
                         <div class="info_section">
-                            <p>Only takes a few seconds!</p>
+                            <p class="text-white mt-4"> Only takes a few seconds!</p>
                         </div>
                     </div>
                 </div>
@@ -46,9 +46,19 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "../assets/variables.scss";
 .bg{
     background-image: url("/public/img/about-call-to-action-57862405.jpg");
     background-size: cover;
-    min-height: 400px;
+    padding: 7rem;
+    
+}
+.br {
+    border: 1px solid;
+    color: $primary;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 </style>

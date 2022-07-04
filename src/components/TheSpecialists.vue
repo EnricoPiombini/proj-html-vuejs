@@ -25,39 +25,65 @@
             <div class="custom_padding">
                 <div class="row justify-content-center mt-5">
 
-                    <div class="col-3" v-for="card in cardList" :key="card.icon">
+                    <div class="col-sm-12 col-md-6 col-lg-3" v-for="card in cardList" :key="card.icon">
 
-                        <div class="card">
-                            <i :class="card.icon"></i>
-                            <div class="title-card"> {{ card.title }} </div>
-                            <p class="card-info p-3"> {{ card.info }} </p>
+                        <div class="card" @pointerleave="hover = !hover">
+                            <div class="mt-4">
+                                <i :class="card.icon" v-if="hover"></i>
+                                <button v-else> {{ card.button }} </button>
+                            </div>
+                            <h2 class="title-card p-2" v-if="hover"> {{ card.title }} </h2>
+                            <h5 v-else> {{ card.titleBis }}</h5>
+
+                            <p class="card-info p-2"> {{ card.info }} </p>
+
                         </div>
                     </div>
+
+                    <!-- <div v-show="!hover" @mouseleave="hover = !hover">
+                        <div class="card">
+                            <div class="mt-4">
+                                <i :class="card.icon" v-show="hover"></i>
+                            </div>
+                            <h2 class="title-card p-2" v-show="hover"> {{ card.title }} </h2>
+                            <p class="card-info p-2"> {{ card.info }} </p>
+                        </div>
+
+                    </div> -->
+
+
                 </div>
+
+
             </div>
 
-            <div class="br"></div>
+        </div>
 
 
-            <div class="bg-curved">
-                <div class="data d-flex justify-content-center">
-                    <div class="m-5" v-for="data in dataList" :key="data.app">
+        <div class="br"></div>
+
+
+        <div class="bg-curved">
+            <div class="data">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="data in dataList" :key="data.app">
                         <i :class="data.icon"></i>
                         <h3 class="number"> {{ data.number }} </h3>
                         <p class="data-info text-white text-uppercase"> {{ data.info }} </p>
                     </div>
                 </div>
             </div>
-
-            <div class="br br-after"></div>
-
         </div>
+
+        <div class="br br-after"></div>
+
+
+
+
+
+
+
     </div>
-
-
-
-
-
 </template>
 
 
@@ -67,23 +93,32 @@ export default {
 
     data() {
         return {
+            hover: true,
+
+
+
             cardList: [
                 {
                     icon: "fa-regular fa-building",
                     title: "Buildings",
-                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
+                    titleBis: "ARTFULLY CRAFTED",
+                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur ",
+                    btn: "GET A QUOTE",
+
 
 
                 },
                 {
                     icon: "fa-solid fa-arrows-rotate",
                     title: "Renovate",
+                    titleBis: "FRESHLY NEW",
                     info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
 
 
                 }, {
                     icon: "fa-solid fa-house-chimney",
                     title: "Construct",
+                    titleBis: "PERFECT LINES",
                     info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
 
 
@@ -91,6 +126,7 @@ export default {
                 {
                     icon: "fa-solid fa-truck",
                     title: "Exclusive",
+                    titleBis: "PLANNING",
                     info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
 
 
@@ -148,12 +184,22 @@ export default {
 }
 
 .custom_padding {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
 
     .card {
         background-color: #F5F5F5;
+        margin-bottom: 1rem;
+        animation: alternate-reverse;
+
+        &:hover {
+            background-color: $primary;
+
+
+        }
     }
+
 
     i {
         font-size: 30px;
@@ -161,6 +207,11 @@ export default {
         border-radius: 50%;
         padding: 1rem;
         margin: auto;
+        color: #747474;
+    }
+
+    p {
+        color: #747474;
     }
 }
 
@@ -171,7 +222,8 @@ export default {
     min-height: 700px;
 
     .data {
-        padding-top: 15rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
         margin: 2rem;
     }
 
@@ -183,6 +235,11 @@ export default {
     h3 {
         color: $primary
     }
+
+    .display-none {
+        display: none;
+    }
+
 }
 
 .br {

@@ -3,11 +3,11 @@
         <BuildingSpaces></BuildingSpaces>
 
         <div class="br"></div>
-            <div class="bg-dark">
+            <div class="bg">
                 <div class="row">
                     <div class="col-3">
-                        <div class="content">
-                            <div class="logo_footer">
+                        <div class="content p-4">
+                            <div class="logo_footer mb-3 text-start">
                                 <img src="img/footer-logo.png" alt="">
                             </div>
                             <div class="description_logo">
@@ -18,15 +18,15 @@
 
                             </div>
                             <div class="button">
-                                <button type="button" class="btn btn-warning">Warning</button>
+                                <button type="button" class="btn btn-warning">LEARN MORE</button>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="content">
+                        <div class="content p-4">
                             <div class="col_title">
-                                <h5>LATEST TWEETS</h5>
+                                <h5 class="text-warning text-start fw-bold mb-5">LATEST TWEETS</h5>
                             </div>
                             <div class="social_tweet">
                                 <div class="profile d-flex justify-content-between">
@@ -46,7 +46,7 @@
 
                                 </div>
                                 <div class="tweet-content">
-                                    <p>Do you need sublime WordPress hosting for your next webite?
+                                    <p class="text-white">Do you need sublime WordPress hosting for your next webite?
                                         Take advantage of exclusive partners offers that we secured just for you,
                                         & launch your site in seconds with <a href="">#avada</a> on WP Engine hosting
                                         & get 30% Off this Black Friday <a href="">bit.ly/3kjLLE2#BlackFriday2020</a>
@@ -78,9 +78,9 @@
                     <ContactUs></ContactUs>
 
                     <div class="col-3">
-                        <div class="content">
+                        <div class="content p-4">
                             <div class="col-title">
-                            <h5>FIND US</h5>
+                            <h5 class="text-warning text-start fw-bold mb-5">FIND US</h5>
                             </div>
                         <div class="img_map">
                             <img src="img/construction_map_pin.png-Notti" alt="" class="w-100">
@@ -122,5 +122,17 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../assets/variables.scss";
+
+.bg{
+    background-color:#1E1E1E;
+    color: #565656;
+}
+
+.bg-banner{
+background-color: #111111;
+padding: 2rem;
+}
+
 </style>

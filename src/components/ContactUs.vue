@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <div class="col-3">
-            <div class="content">
-                <h5>CONTACT US</h5>
+    
+        <div class="col-2">
+            <div class="content p-4">
+                <h5 class="text-warning fw-bold text-start mb-5">CONTACT US</h5>
                 <div class="contact-List">
                  <div class="d-flex" v-for="contact in contactsList" :key="contact.icon">
                     <div class="icon">
@@ -17,7 +17,7 @@
             </div>
 
         </div>
- </div>
+ 
 
 </template>
 
@@ -58,4 +58,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/variables.scss";
 </style>

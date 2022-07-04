@@ -6,26 +6,28 @@
             <p class="work-description m-auto w-50 mb-5">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ratione itaque assumenda laboriosam
                 ducimus ipsa expedita odio fuga dicta blanditiis voluptatibus dolorum placeat.
-                
-
             </p>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-3" v-for="project in projectsList" :key="project.img">
-                <div class="content">
-                    <img :src="project.img" alt="" class="w-100">
-                </div>
 
+        <div class="custom-padding">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-4" v-for="project in projectsList" :key="project.img">
+                    <div class="content">
+                        <img :src="project.img" alt="" class="w-100">
+                    </div>
+
+                </div>
             </div>
         </div>
-
         <div class="banner-projects d-flex align-items-center mt-5">
             <div class="br br-transparent"></div>
-            <div><h6 class="text-uppercase">View all Projects</h6> </div>
+            <div>
+                <h6 class="text-uppercase">View all Projects</h6>
+            </div>
             <div class="br br-transparent"></div>
-       
-        
-        
+
+
+
         </div>
 
     </div>
@@ -61,7 +63,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/variables.scss";
-.br{
+
+.br {
     border: 2px solid;
     color: $primary;
     margin: auto;
@@ -70,8 +73,12 @@ export default {
     margin-top: 2rem;
 }
 
-.br-transparent{
-    color:$gray-200;
+.br-transparent {
+    color: $gray-200;
     flex-basis: 30%;
+}
+
+.custom-padding{
+    padding: 10rem;
 }
 </style>

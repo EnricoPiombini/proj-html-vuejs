@@ -67,9 +67,7 @@ export default {
         font-size: 60px;
     }
 
-    .button {}
-
-    .btn-darker {
+ .btn-darker {
         background-color: $btngray;
     }
 }
