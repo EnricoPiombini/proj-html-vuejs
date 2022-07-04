@@ -25,12 +25,13 @@
             <div class="custom_padding">
                 <div class="row justify-content-center mt-5">
 
-                    <div class="col-sm-12 col-md-6 col-lg-3" v-for="card in cardList" :key="card.icon">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="card in cardList" :key="card.icon">
 
-                        <div class="card" @pointerleave="hover = !hover">
+                        <div class="card" @pointerenter="hover = !hover">
                             <div class="mt-4">
                                 <i :class="card.icon" v-if="hover"></i>
-                                <button v-else> {{ card.button }} </button>
+                                <button type="button" class="my-btn btn btn-light m-2 position-btn" v-else>{{ card.btn }}
+                                </button>
                             </div>
                             <h2 class="title-card p-2" v-if="hover"> {{ card.title }} </h2>
                             <h5 v-else> {{ card.titleBis }}</h5>
@@ -39,17 +40,6 @@
 
                         </div>
                     </div>
-
-                    <!-- <div v-show="!hover" @mouseleave="hover = !hover">
-                        <div class="card">
-                            <div class="mt-4">
-                                <i :class="card.icon" v-show="hover"></i>
-                            </div>
-                            <h2 class="title-card p-2" v-show="hover"> {{ card.title }} </h2>
-                            <p class="card-info p-2"> {{ card.info }} </p>
-                        </div>
-
-                    </div> -->
 
 
                 </div>
@@ -112,14 +102,15 @@ export default {
                     icon: "fa-solid fa-arrows-rotate",
                     title: "Renovate",
                     titleBis: "FRESHLY NEW",
-                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
-
+                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur ",
+                    btn: "GET A QUOTE",
 
                 }, {
                     icon: "fa-solid fa-house-chimney",
                     title: "Construct",
                     titleBis: "PERFECT LINES",
-                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
+                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur ",
+                    btn: "GET A QUOTE",
 
 
                 },
@@ -127,7 +118,8 @@ export default {
                     icon: "fa-solid fa-truck",
                     title: "Exclusive",
                     titleBis: "PLANNING",
-                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur "
+                    info: "Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur ",
+                    btn: "GET A QUOTE",
 
 
                 },
@@ -199,9 +191,7 @@ export default {
 
         }
     }
-
-
-    i {
+ i {
         font-size: 30px;
         border: 1px solid;
         border-radius: 50%;
@@ -219,11 +209,11 @@ export default {
 
     background-image: url("/public/img/home-244125289.jpg");
     background-size: cover;
-    min-height: 700px;
+    min-height: 600px;
 
     .data {
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding-top:12rem;
+        padding-bottom: 2rem;
         margin: 2rem;
     }
 
@@ -244,7 +234,7 @@ export default {
 
 .br {
     width: 100%;
-    height: 150px;
+    height: 100px;
     border-radius: 15%;
     position: relative;
     top: 100px;

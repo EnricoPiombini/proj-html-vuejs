@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg pt-5">
+        <div class="bg">
             <div class="text text-center pt-5">
                 <h2>
                     Our Core Values
@@ -14,8 +14,8 @@
             </div>
 
 
-            <div class="row">
-                <div class="col-3" v-for="(value, i) in valuesList" :key="i">
+            <div class="row justify-content-center g-2">
+                <div class="col-12 col-sm-12 col-md-3" v-for="(value, i) in valuesList" :key="i">
                     <div class="content">
                         <div :class="{
                             'bg-red': value.id === 1,
@@ -27,7 +27,7 @@
                             <i id="value_color" :class="value.icon"></i>
                         </div>
 
-                        <h6 class="sub-title"> {{ value.subTitle }} </h6>
+                        <h6 class="sub-title mt-3"> {{ value.subTitle }} </h6>
                         <div class="div-line"></div>
                         <p class="text"> {{ value.text }} </p>
 
@@ -100,6 +100,7 @@ export default {
     background-color: #F5F5F5;
     position: relative;
     top: 140px;
+    padding: 3rem;
 }
 
 
@@ -125,11 +126,15 @@ export default {
         border-radius: 50%;
         font-size: 70px;
         margin: auto;
+
+        &:hover {
+            background-color: $primary;
+        }
     }
 
     i {
         color: $gray-200;
-        font-size: 55px
+        font-size: 55px;
     }
 }
 
@@ -150,7 +155,7 @@ export default {
 }
 
 .div-line {
-    border: 1px solid black;
+    border: 1px solid $lightgrey;
     width: 30px;
     margin: auto;
     margin-bottom: 2rem;
