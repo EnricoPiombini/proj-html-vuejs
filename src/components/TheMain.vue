@@ -24,12 +24,8 @@
 
                 <div class="row justify-content-center g-3">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="article in articleList" :key="article.img">
-                        <TheLatests :article="article"
-                        ></TheLatests>
-                       
-                       
-                        
-                        
+                        <TheLatests :article="article"></TheLatests>
+
                     </div>
                 </div>
 
@@ -73,7 +69,7 @@ export default {
     data() {
         return {
 
-            newText:true,
+            upHere: false,
             articleList: [
                 {
                     img: "img/blog-post-134132600-400x241.jpg",
@@ -99,7 +95,8 @@ export default {
 
 
         }
-    }
+    },
+
 }
 
 
@@ -108,6 +105,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/variables.scss";
+
 .bg-relative {
     background-color: #F5F5F5;
     position: relative;
@@ -118,7 +116,7 @@ export default {
     font-size: 17px;
 }
 
-.br{
+.br {
     border: 2px solid;
     color: $primary;
     margin: auto;
@@ -127,7 +125,7 @@ export default {
     margin-top: 2rem;
 }
 
-.br-transparent{
+.br-transparent {
     color: $gray-100;
     flex-basis: 30%;
 }
