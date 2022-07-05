@@ -14,9 +14,9 @@
             </div>
 
 
-            <div class="row justify-content-center g-2">
-                <div class="col-12 col-sm-12 col-md-3" v-for="(value, i) in valuesList" :key="i">
-                    <div class="content">
+            <div class="row justify-content-center g-4">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2" v-for="(value, i) in valuesList" :key="i">
+                    <div class="content p-4">
                         <div :class="{
                             'bg-red': value.id === 1,
                             'bg-blue': value.id === 2,
@@ -54,7 +54,7 @@ export default {
                 {
                     icon: "fa-solid fa-house-chimney",
                     subTitle: "Great Services",
-                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,adipisci velit,sed quia",
+                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,velit,sed quia",
                     id: 1
 
 
@@ -63,19 +63,19 @@ export default {
                 {
                     icon: "fa-solid fa-gear",
                     subTitle: "Highest Standard",
-                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,adipisci velit,sed quia",
+                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,velit,sed quia",
                     id: 2
                 },
                 {
                     icon: "fa-solid fa-users",
                     subTitle: "Professional Teams",
-                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,adipisci velit,sed quia",
+                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,velit,sed quia",
                     id: 3
                 },
                 {
                     icon: "fa-regular fa-lightbulb",
                     subTitle: "Creative Solutions",
-                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,adipisci velit,sed quia",
+                    text: "Neque porro quisquiam est, qui dolorem ipsum quia dolor sit amet,consectetur,velit,sed quia",
                     id: 4
 
                 },

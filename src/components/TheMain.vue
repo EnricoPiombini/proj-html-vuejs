@@ -22,13 +22,13 @@
                 </div>
 
 
-                <div class="row justify-content-center g-2">
-                    <div class="col-12 col-sm-6 col-md-3" v-for="article in articleList" :key="article.img">
+                <div class="row justify-content-center g-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="article in articleList" :key="article.img">
                         <TheLatests :article="article"></TheLatests>
                     </div>
                 </div>
 
-                <div class="banner-projects d-flex align-items-center mt-5">
+                <div class="banner-projects d-flex align-items-center mt-5 pb-5">
                     <div class="br br-transparent"></div>
                     <div>
                         <h6 class="text-uppercase">View all Articles</h6>
@@ -108,7 +108,7 @@ export default {
 }
 
 .font {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .br{
@@ -121,7 +121,7 @@ export default {
 }
 
 .br-transparent{
-    color:$gray-200;
+    color: $gray-100;
     flex-basis: 30%;
 }
 </style>

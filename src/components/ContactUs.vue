@@ -1,6 +1,6 @@
 <template>
     
-        <div class="col-12 col-sm-6 col-md-3">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
             <div class="content p-4">
                 <h5 class="text-warning fw-bold text-start mb-5">CONTACT US</h5>
                 <div class="contact-List">
@@ -9,7 +9,7 @@
                         <i :class="contact.icon"></i>
                     </div>
                     <div class="address">
-                        <p>{{contact.address}}</p>
+                        <p class="ms-2 text-start">{{contact.address}}</p>
                     </div>
                  </div>
                    
@@ -58,5 +58,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/variables.scss";
+
 </style>

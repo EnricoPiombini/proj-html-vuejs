@@ -3,8 +3,10 @@
         <div class="card custom-height">
             <img :src="article.img" class="card-img-top" alt="...">
             <div class="card-body">
-                <h4 class="card-title">{{ article.subTitle }}</h4>
-                <p class="card-text card-font">{{ article.text }}</p>
+                <h4 class="card-title pt-2 text-start">{{ article.subTitle }}</h4>
+                <h6 class="date-year text-start">December 7th, 2015</h6>
+                
+                <p class="card-text my-card">{{ article.text }}</p>
 
             </div>
         </div>
@@ -45,8 +47,10 @@ export default {
 
 .card-body {
 
-    .card-font {
-        font-size: 18px;
+    .my-card {
+        font-size: 17px;
+        text-align: start;
+        padding: .5rem;
     }
 }
 

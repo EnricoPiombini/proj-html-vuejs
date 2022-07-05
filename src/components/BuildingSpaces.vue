@@ -19,7 +19,7 @@
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="content">
                         <div class="button">
-                            <button type="button" class="btn btn-warning">Warning</button>
+                            <button type="button" class="btn btn-warning">GET A FREE QUOTE</button>
                         </div>
                         <div class="info_section">
                             <p class="text-white mt-4"> Only takes a few seconds!</p>

@@ -5,8 +5,8 @@
         <div class="br"></div>
             <div class="bg">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <div class="content p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="content p-4 mt-5 text-start">
                             <div class="logo_footer mb-3 text-start">
                                 <img src="img/footer-logo.png" alt="">
                             </div>
@@ -23,20 +23,20 @@
 
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                         <div class="content p-4">
                             <div class="col_title">
                                 <h5 class="text-warning text-start fw-bold mb-5">LATEST TWEETS</h5>
                             </div>
-                            <div class="social_tweet">
+                            <div class="social_tweet text-start">
                                 <div class="profile d-flex justify-content-between">
                                     <div class="logo_small d-flex">
                                         <div>
-                                            <img src="img/3a74ce3d0532b7773b174c45ca3bd05a_normal.png" alt="">
+                                            <img src="img/3a74ce3d0532b7773b174c45ca3bd05a_normal.png" alt="" class="rounded-circle m-1">
                                         </div>
                                         <div>
-                                            <h5>ThemeFusion</h5>
-                                            <h6>@Theme_Fusion</h6>
+                                            <h5 class="text-white">ThemeFusion</h5>
+                                            <h6 class="text-white">@Theme_Fusion</h6>
                                         </div>
                                     </div>
 
@@ -77,7 +77,7 @@
 
                     <ContactUs></ContactUs>
 
-                    <div class="col-12 col-sm-6 col-md-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                         <div class="content p-4">
                             <div class="col-title">
                             <h5 class="text-warning text-start fw-bold mb-5">FIND US</h5>

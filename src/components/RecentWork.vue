@@ -11,7 +11,7 @@
 
         <div class="custom-padding">
             <div class="row justify-content-center g-3">
-                <div class="col-sm-12 col-md-12 col-lg-4" v-for="project in projectsList" :key="project.img">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3" v-for="project in projectsList" :key="project.img">
                     <div class="content">
                         <img :src="project.img" alt="" class="w-100">
                     </div>
@@ -80,7 +80,5 @@ export default {
 
 .custom-padding{
     padding: 2rem;
-    padding-right: 15rem;
-    padding-left: 15rem;
 }
 </style>
