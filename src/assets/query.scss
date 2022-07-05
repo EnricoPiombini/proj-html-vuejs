@@ -1,0 +1,17 @@
+@media screen and (max-width:768px) {
+    .right-btn {
+       display: none;
+   }
+
+}
+
+@media screen and (max-width:576px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-toggler{
+        margin-top: 2rem;
+    }
+    
+}

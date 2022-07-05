@@ -54,6 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/variables.scss";
+@import "../assets/query.scss";
 
 .jumbo-tron {
     background-image: url("/public/img/home-slider-62528242.jpg");
@@ -83,7 +84,7 @@ export default {
     justify-content: space-between;
     overflow: hidden;
     position: absolute;
-    top: 220px;
+    top: 140px;
     right: 15px;
     padding: 8px 6px;
     width: 55px;
@@ -94,7 +95,7 @@ export default {
 }
 
 .bottom {
-    top: 280px;
+    top: 200px;
 }
 
 .my-btn {

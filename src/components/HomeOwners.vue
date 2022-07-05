@@ -1,80 +1,51 @@
 <template>
     <div>
         <div class="curve-div-top"></div>
-<div>
-        <div class="bg-curved">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="slider">
-                        <div class="section-title">
-                            <h2 class="text-white">Our Home Owners Say</h2>
-                        </div>
-                        <div class="br"></div>
+        <div>
+            <div class="bg-curved">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="slider">
+                            <div class="section-title">
+                                <h2 class="text-white">Our Home Owners Say</h2>
+                            </div>
+                            <div class="br"></div>
 
-                        <div class="item">
-                            <img :src="carouselList[currentIndex].img"
-                                v-bind:alt="'Immagine di ' + carouselList[currentIndex].img" class="rounded-circle" />
-                            <div class="text w-50 m-auto ">
-                                <p class="text-white font-italic owner-statement">
-                                    {{ carouselList[currentIndex].text }}
-                                </p>
+                            <div class="item">
+                                <img :src="carouselList[currentIndex].img"
+                                    v-bind:alt="'Immagine di ' + carouselList[currentIndex].img"
+                                    class="rounded-circle" />
+                                <div class="text w-50 m-auto ">
+                                    <p class="text-white font-italic owner-statement">
+                                        {{ carouselList[currentIndex].text }}
+                                    </p>
 
-                                <div class="owners-name">
-                                    <h5 class="fw-bold text-white">{{ carouselList[currentIndex].name }}</h5>
+                                    <div class="owners-name">
+                                        <h5 class="fw-bold text-white">{{ carouselList[currentIndex].name }}</h5>
 
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="carousel-dots">
+                                <button type="button" class="btn btn-outline-light btn-padding prev"
+                                    @click="changeImg('prev')"></button>
+                                <button type="button" class="btn btn-outline-light btn-padding next"
+                                    @click="changeImg('next')"></button>
+                            </div>
+
+
+
                         </div>
-
-                        <div class="carousel-dots">
-                            <button type="button" class="btn btn-outline-light btn-padding prev"
-                                @click="changeImg('prev')"></button>
-                            <button type="button" class="btn btn-outline-light btn-padding next"
-                                @click="changeImg('next')"></button>
-                        </div>
-
-
 
                     </div>
-
                 </div>
+
+
+
+
             </div>
-
-
-            <!-- 
-            <div class="slidesInfo slides-index" v-for="(slider, i) in carouselList" :key="i"
-                :class="{ 'display-none': slider.id===1 }">
-                <div class="text text-center">
-                    <div class="section-title">
-                        <h2 class="text-white">Our Home Owners Say</h2>
-                    </div>
-                    <div class="br"></div>
-
-                    <div class="img_section">
-                        <img :src="slider.img" alt="" srcset="" class="rounded-circle">
-                    </div>
-
-                    <div class="owners-text w-50 mt-4 m-auto">
-                        <p class="font-italic text-white">
-                            {{ slider.text }}
-                        </p>
-                        <div class="owner-name">
-                            <h5 class="text-white mt-4 fw-bold">
-                                {{ slider.name }}
-                            </h5>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div> -->
-
         </div>
-</div>
-        <!-- <div class="carousel-dots">
-            <button type="button" class="btn btn-outline-light btn-padding prev" @click="changeImg('prev')"></button>
-            <button type="button" class="btn btn-outline-light btn-padding next" @click="changeImg('next')"></button>
-        </div> -->
 
         <div class="curve-div-bottom"></div>
 
@@ -91,13 +62,13 @@ export default {
             carouselList: [
                 {
                     img: "img/home-testimonial-113165296.jpg",
-                    text: "No man but feels more of a man in the world if he have but a bit of ground that he can call his own However small it is on the surface, it is four thousand mile deep and that in a very handsome property",
+                    text: " 'No man but feels more of a man in the world if he have but a bit of ground that he can call his own However small it is on the surface, it is four thousand mile deep and that in a very handsome property.''",
                     name: "HARRY SMITH - NEW HOME OWNER"
 
                 },
                 {
                     img: "img/home-testimonial-84268399.jpg",
-                    text: "No man but feels more of a man in the world if he have but a bit of ground that he can call his own However small it is on the surface, it is four thousand mile deep and that in a very handsome property",
+                    text: "Many novice real estate investors soon quit the profession and invest. When you invest in real estate, you often see a side of humanity that stocks, bonds, mutual funds, and saving money shelter you from.",
                     name: "JOHN DOE - PROPERTY INVESTOR",
 
 
