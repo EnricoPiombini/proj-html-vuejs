@@ -27,7 +27,7 @@
 
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" v-for="card in cardList" :key="card.icon">
 
-                        <div class="card" @pointerenter="hover = !hover" @pointerleave="hover = !hover">
+                        <div class="card" @pointerenter="hover = hover" @pointerleave="hover = !hover">
                             <div class="mt-4">
                                 <i :class="card.icon" v-if="hover"></i>
                                 <button type="button" class="my-btn btn btn-outline-secondary m-2 position-btn"

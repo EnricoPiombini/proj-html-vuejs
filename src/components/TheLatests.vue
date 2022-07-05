@@ -1,11 +1,28 @@
 <template>
     <div>
-        <div class="card custom-height" @mouseover="hover = true" @mouseleave="hover = false">
-            <h4 class="bg-hover" v-if="hover">{{ article.subTitle }}</h4>
-            <div v-else>
-                <img :src="article.img" class="card-img-top" alt="...">
-            </div>
+        <div class="card custom-height p-3" @mouseover="hover = true" @mouseleave="hover = false">
 
+            <div class="content">
+
+
+                <div class="card bg-hover p-3" v-if="hover">
+                    <div class="content-else">
+                        <div class="icon">
+                            <i class="fa-solid fa-magnifying-glass "></i>
+                            <i class="fa-solid fa-link "></i>
+                        </div>
+                        <h5 class="text-white">{{ article.subTitle }}</h5>
+                        <div>
+                            <h6 class="text-white">Architecture, Buildings, Construction, News</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-else>
+                    <img :src="article.img" class="card-img-top" alt="...">
+                </div>
+
+            </div>
 
 
 
@@ -16,25 +33,12 @@
 
                 <p class="card-text my-card">{{ article.text }}</p>
 
-                <!-- <div @mouseover="upHere = true" @mouseleave="upHere = false">
-                    <h2> Something Something </h2>
-                    <some-component v-show="upHere"></some-component>
-                </div>
-                on vue instance
-
-                data : {
-                upHere : false
-                } -->
-
-
-
-
             </div>
+
+
         </div>
-
-
-
     </div>
+
 </template>
 
 
@@ -79,6 +83,20 @@ export default {
     }
 }
 
+.icon {
+
+
+    i {
+        font-size: 20px;
+        border: 1px solid;
+        border-radius: 50%;
+        padding: 1rem;
+        color: $primary;
+        background-color: white;
+        
+}
+
+}
 .bg-hover {
     &:hover {
         background-color: $primary;
