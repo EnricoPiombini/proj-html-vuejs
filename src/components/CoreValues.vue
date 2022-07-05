@@ -15,7 +15,7 @@
 
 
             <div class="row justify-content-center g-4">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2" v-for="(value, i) in valuesList" :key="i">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3" v-for="(value, i) in valuesList" :key="i">
                     <div class="content p-4">
                         <div :class="{
                             'bg-red': value.id === 1,

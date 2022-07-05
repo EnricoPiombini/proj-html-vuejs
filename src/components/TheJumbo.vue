@@ -2,8 +2,18 @@
     <div>
         <div class="jumbo-tron">
             <div class="right-btn">
-                <div class="sticky-btn"></div>
-                <div class="sticky-btn bottom"></div>
+                <div class="sticky-btn fixed">
+                    <div class="content">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p class="font-size">Demos</p>
+                    </div>
+                </div>
+                <div class="sticky-btn bottom fixed">
+                    <div class="content">
+                        <h6 class="fw-bold text-success">$39</h6>
+                        <h6 class="font-size">On Sale</h6>
+                    </div>
+                </div>
             </div>
             <div class="jumbo-text text-center">
                 <h1 class="fw-800">
@@ -77,6 +87,12 @@ export default {
     }
 }
 
+.content {
+    .font-size {
+        font-size: 12px;
+    }
+}
+
 .sticky-btn {
     display: flex;
     flex-direction: column;
@@ -84,13 +100,15 @@ export default {
     justify-content: space-between;
     overflow: hidden;
     position: absolute;
-    top: 140px;
+    top: 135px;
     right: 15px;
     padding: 8px 6px;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     background-color: #fff;
     border-radius: 6px;
+    position: fixed;
+    z-index: 1000;
 
 }
 

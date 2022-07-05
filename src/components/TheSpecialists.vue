@@ -25,13 +25,14 @@
             <div class="custom_padding">
                 <div class="row justify-content-center mt-5">
 
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="card in cardList" :key="card.icon">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" v-for="card in cardList" :key="card.icon">
 
-                        <div class="card"  @mouseenter="hover =!hover"  @mouseleave="hover = !hover">
+                        <div class="card" @pointerenter="hover = !hover" @pointerleave="hover = !hover">
                             <div class="mt-4">
                                 <i :class="card.icon" v-if="hover"></i>
-                                <button type="button" class="my-btn btn btn-outline-secondary m-2 position-btn" v-else>{{ card.btn
-                                }}
+                                <button type="button" class="my-btn btn btn-outline-secondary m-2 position-btn"
+                                    v-else>{{ card.btn
+                                    }}
                                 </button>
                             </div>
                             <h2 class="title-card p-2" v-if="hover"> {{ card.title }} </h2>
@@ -160,6 +161,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/variables.scss";
+@import "../assets/query.scss";
 @import 'animate.css';
 
 .title {
@@ -186,15 +188,8 @@ export default {
         background-color: #F5F5F5;
         margin-bottom: 1rem;
 
-        /* referring directly to the animation's @keyframe declaration */
-
-        /* don't forget to set a duration! */
-
-
         &:hover {
             background-color: $primary;
-            // animation:bounce;
-            animation-play-state: running;
         }
     }
 

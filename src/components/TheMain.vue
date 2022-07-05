@@ -24,7 +24,12 @@
 
                 <div class="row justify-content-center g-3">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="article in articleList" :key="article.img">
-                        <TheLatests :article="article"></TheLatests>
+                        <TheLatests :article="article"
+                        ></TheLatests>
+                       
+                       
+                        
+                        
                     </div>
                 </div>
 
@@ -67,6 +72,8 @@ export default {
 
     data() {
         return {
+
+            newText:true,
             articleList: [
                 {
                     img: "img/blog-post-134132600-400x241.jpg",
