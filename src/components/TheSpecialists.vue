@@ -27,10 +27,11 @@
 
                     <div class="col-12 col-sm-12 col-md-6 col-lg-3" v-for="card in cardList" :key="card.icon">
 
-                        <div class="card" @pointerenter="hover = !hover">
+                        <div class="card"  @mouseenter="hover =!hover"  @mouseleave="hover = !hover">
                             <div class="mt-4">
                                 <i :class="card.icon" v-if="hover"></i>
-                                <button type="button" class="my-btn btn btn-light m-2 position-btn" v-else>{{ card.btn }}
+                                <button type="button" class="my-btn btn btn-outline-secondary m-2 position-btn" v-else>{{ card.btn
+                                }}
                                 </button>
                             </div>
                             <h2 class="title-card p-2" v-if="hover"> {{ card.title }} </h2>
@@ -159,6 +160,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/variables.scss";
+@import 'animate.css';
 
 .title {
     h2 {
@@ -183,15 +185,20 @@ export default {
     .card {
         background-color: #F5F5F5;
         margin-bottom: 1rem;
-        animation: alternate-reverse;
+
+        /* referring directly to the animation's @keyframe declaration */
+
+        /* don't forget to set a duration! */
+
 
         &:hover {
             background-color: $primary;
-
-
+            // animation:bounce;
+            animation-play-state: running;
         }
     }
- i {
+
+    i {
         font-size: 30px;
         border: 1px solid;
         border-radius: 50%;
@@ -212,7 +219,7 @@ export default {
     min-height: 600px;
 
     .data {
-        padding-top:12rem;
+        padding-top: 12rem;
         padding-bottom: 2rem;
         margin: 2rem;
     }
