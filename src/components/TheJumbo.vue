@@ -1,6 +1,10 @@
 <template>
     <div>
         <div class="jumbo-tron">
+            <div class="right-btn">
+                <div class="sticky-btn"></div>
+                <div class="sticky-btn bottom"></div>
+            </div>
             <div class="jumbo-text text-center">
                 <h1 class="fw-800">
                     BUILDING INSPIRING SPACES
@@ -53,12 +57,12 @@ export default {
 
 .jumbo-tron {
     background-image: url("/public/img/home-slider-62528242.jpg");
-    min-height: 550px;
+    min-height: 760px;
     background-size: cover;
     object-fit: contain;
 
     .jumbo-text {
-        padding-top: 10rem;
+        padding-top: 20rem;
     }
 
     h1 {
@@ -67,9 +71,30 @@ export default {
         font-size: 60px;
     }
 
- .btn-darker {
+    .btn-darker {
         background-color: $btngray;
     }
+}
+
+.sticky-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: absolute;
+    top: 220px;
+    right: 15px;
+    padding: 8px 6px;
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 6px;
+
+}
+
+.bottom {
+    top: 280px;
 }
 
 .my-btn {

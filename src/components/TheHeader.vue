@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar p-5 sticky-top navbar-expand-lg navbar-light bg-light justify-content-between">
+        <nav class="navbar p-3 fixed-top navbar-expand-lg navbar-light bg-light justify-content-between">
             <div class="left-side">
                 <a class="navbar-brand" href="#">
                     <img src="img/construction_logo.png" class="d-inline-block align-text-top">
